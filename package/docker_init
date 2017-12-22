@@ -1,5 +1,5 @@
 #!/bin/bash
 mosquitto &> /var/log/mosquitto.log &
 touch /var/log/rook_daemon.log
-java -cp "/rook/daemon/lib/*" run.rook.daemon.DaemonRunner &> /var/log/rook_daemon.log &
+java -cp "/rook/daemon/lib/*" run.rook.daemon.Daemon &> /var/log/rook_daemon.log &
 tail -f /var/log/rook_daemon.log
